@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server.js",
     "dist": "rm -rf dist/* && cross-env BABEL_ENV=production webpack -p --progress --config webpack.prod.js",
-    "lint": "eslint -ext .js src",
+    "lint": "eslint --ext .js src",
     "precommit": "npm run lint"
   },
   "keywords": [],
