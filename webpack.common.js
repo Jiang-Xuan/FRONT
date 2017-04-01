@@ -12,6 +12,10 @@ const vendor = require('./config.js').vendor
 const output = path.resolve(__dirname, 'dist')
 const src = path.resolve(__dirname, 'src')
 
+// 个人webpack插件
+const InsertManifestWebpackPlugin = require('./insert-manifest-json-webpack-plugin')
+//
+
 // https://doc.webpack-china.org/plugins/extract-text-webpack-plugin/#-
 // 为什么要在开发的时候不分割css文件?
 // 因为把CSS文件分割出去之后开发中无法热替换CSS样式,要手工刷新
@@ -68,7 +72,11 @@ const config = {
     new ChunkManifestPlugin({
       filename: 'manifest.json',
       manifestVariable: 'webpackManifest'
-    })
+    }),
+    new InlineManifestWebpackPlugin({
+      name: 'webpackManifest'
+    }),
+    new InsertManifestWebpackPlugin()
   ]
 }
 
