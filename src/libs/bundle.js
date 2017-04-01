@@ -21,7 +21,6 @@ class Bundle extends Component {
   load(props) {
     let self = this
     props.load((mod) => {
-      console.log(mod)
       self.setState({
         // handle both es imports and cjs
         mod: mod.default ? mod.default : mod

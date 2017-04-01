@@ -1,7 +1,8 @@
 import React from 'react'
 import { render } from 'react-dom'
 import { Router, Switch, Route } from 'react-router'
-import createHashHistory from 'history/createHashHistory'
+// import createHashHistory from 'history/createHashHistory'
+import createBrowserHistory from 'history/createBrowserHistory'
 
 import './stylesheets/index.css'
 
@@ -9,8 +10,6 @@ import Bundle from './libs/bundle.js'
 import App from './containers/app.js'
 import loadHome from 'bundle-loader?lazy!./containers/home.js'
 import loadAbout from 'bundle-loader?lazy!./containers/about.js'
-
-console.log(loadHome )
 
 class Loading extends React.Component {
   render() {
@@ -39,7 +38,7 @@ const About = () => (
 )
 
 // https://www.npmjs.com/package/history
-const history = createHashHistory()
+const history = createBrowserHistory()
 
 // https://reacttraining.com/react-router/core/guides/quick-start
 render((
