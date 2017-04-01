@@ -24,7 +24,7 @@ FRONT >>> dist 生产代码
           index.js 项目入口文件
       .babelrc babel配置文件
       .editorconfig editorconfig配置文件
-      .eslintrc eslint配置文件
+      .eslintrc.js eslint配置文件
       .gitbranch git分支注释工具配置文件
       .gitignore 让git忽略跟踪的文件列表
       config.js 项目的配置文件
