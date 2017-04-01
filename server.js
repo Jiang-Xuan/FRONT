@@ -6,6 +6,8 @@ const PORT = require('./config').PORT
 
 let compiler = webpack(config)
 
+// https://webpack.js.org/configuration/stats/#components/sidebar/sidebar.jsx
+// stats 规则
 let server = new WebpackDevServer(compiler, {
   hot: true,
   inline: true,

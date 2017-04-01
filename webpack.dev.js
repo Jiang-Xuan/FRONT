@@ -1,4 +1,4 @@
-const config = require('./webpack.common.js')
+const config = require('./webpack.common.js').config
 const webpack = require('webpack')
 const HOST = require('./config').HOST
 const PORT = require('./config').PORT
